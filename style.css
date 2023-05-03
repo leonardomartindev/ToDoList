@@ -26,7 +26,7 @@
   }
 
   h1{
-    font-size: 3.3rem;
+    font-size: 4rem;
   }
   h2{
     font-size: 2.4rem;
@@ -39,7 +39,7 @@
     list-style: none;
   }
 
-  ul::after{
+  #icons-sidebar::after{
     content: '';
     width: 90%;
     border-bottom: 4px solid var(--textPrimary);
@@ -100,9 +100,10 @@
   }
   
   .sidebar-icon{
-    
     width: 4rem;
 }
+
+
 
   #arrow-collapse{
     position: absolute;
@@ -112,3 +113,153 @@
     transition: 300ms all ease-in-out;
   }
 
+/* Seção principal */
+
+
+
+#nav-header{
+  width: 75vw;
+  margin-left: 25vw;
+  color: var(--textPrimary);
+  transition: all 300ms ease-in-out;
+}
+
+
+
+#nav-header ul li{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 2rem 1rem 2rem;
+  transition: all 300ms ease-in-out;
+
+}
+
+#nav-header ul{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#inbox{
+  display: flex;
+  flex-wrap: wrap;
+  width: 20%;
+  max-width: 370px;
+}
+
+#inbox img{
+  width: 6.5rem;
+}
+
+#settings{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-config{
+  background-color: var(--textPrimary);
+  color: var(--textSecondary);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.mouseenter{
+  visibility: hidden;
+}
+
+
+#settings img{
+  width: 5rem;
+  cursor: pointer;
+}
+.data{
+  margin-top:-4rem;
+  color: var(--date);
+  font-style: italic;
+}
+
+main{
+  width: 75vw;
+  margin-left: calc(25vw + 2rem);
+}
+
+#Add-task-input{
+  width: 70vw;
+  background-color: var(--secondaryColor);
+  padding: 2rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+
+
+#Add-task-input::placeholder{
+  color: var(--placeholderTask);
+  font-size: 2rem;
+  
+}
+
+.tasks-ul{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--textSecondary);
+}
+
+.tasks-ul li{
+  padding: 2rem;
+  width: 70vw;
+  border-radius: 10px;
+  background-color: var(--secondaryColor);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.tasks-ul li input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  /* background-color:red; */
+  border: 2px solid var(--backgroundColor);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label{
+  font-size: 2.6rem;
+}
+
+.tasks-ul input[type="checkbox"]::after{
+  font-family: "Font Awesome 5 free";
+  color: var(--textSecondary);
+  font-weight: 900;
+  font-size: 3rem;
+  content: "\f00c";
+  display: none;
+}
+
+.tasks-ul input[type="checkbox"]:hover{
+  background-color: var(--placeholderTask);
+}
+
+.tasks-ul input[type="checkbox"]:checked{
+  background-color: #5bcd3e;
+}
+
+.tasks-ul input[type="checkbox"]:checked::after{
+  display: block;
+}
+
+.tasks-ul input[type="checkbox"]:checked label{
+  text-decoration: line-through;
+}

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>To Do List</title>
 </head>
 <body>
@@ -16,27 +17,63 @@
                 <h2>To Do List</h2>
             </div>
             <ul id="icons-sidebar">
-                <li>
+                <li class="inbox">
                     <span><img src="img/inbox.svg" alt="" class="sidebar-icon"></span>
                     <span>Inbox</span>
                 </li>
-                <li>
+                <li class="today">
                     <span><img src="img/today.svg" alt="" class="sidebar-icon"></span>
                     <span>Today</span>
                 </li>
-                <li>
+                <li class="someday">
                     <span><img src="img/someday.svg" alt="" class="sidebar-icon"></span>
                     <span>Someday</span>
                 </li>
-                <li>
+                <li class="trash">
                     <span><img src="img/trash.svg" alt="" class="sidebar-icon"></span>
                     <span>trash</span>
                 </li>
             </ul>
         </div>
-        
     </div>
     <img src="img/arrow-sidebar.svg" alt="" id="arrow-collapse">
+    <header>
+            <nav id="nav-header">
+                <ul>
+                    <li id="inbox">
+                        <span><img src="img/inbox.svg" alt=""></span>
+                        <h1>Inbox</h1>
+                        <span class="data">DATA/DATA/DATA</span>
+
+                    </li>
+                </li>
+                <li id="settings">
+                    <img src="img/settings.svg" alt="">
+                    <div class="container-config mouseenter">
+                        <span><input type="checkbox" name="dark"> <label for="Dark">Dark Mode</label></span>
+                        <span><input type="checkbox" name="showDelete"> <label for="showDelete">Show Completed</label></span>
+                    </div>
+                </li>
+                
+               
+            </ul>
+            
+        </nav>
+    </header>
+    <main>
+        <form action="">
+            <input id="Add-task-input" type="text" placeholder="&plus; Add task, press enter to save">
+        </form>
+        <ul class="tasks-ul">
+            <li>
+                <input type="checkbox">
+                <label for="gato">Dar banho no gato</label>
+            </li>
+            
+        </ul>
+    </main>
+
     <script src="/script/sidebar.js"></script>
+    <script src="/script/script.js"></script>
 </body>
 </html>
