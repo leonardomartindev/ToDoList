@@ -4,9 +4,6 @@ const lis = sideBar.querySelector("ul").querySelectorAll("li");
 const nav = document.getElementById('nav-header');
 const inbox = document.getElementById("inbox")
 
-
-console.log(lis)
-
 arrowCollapse.addEventListener('click', () => {
     // if(sideBar.style.width === "0px"){
     // }
