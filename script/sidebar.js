@@ -8,8 +8,7 @@ const tasksLi = document.getElementsByClassName("tasks-li")
 
 
 arrowCollapse.addEventListener('click', () => {
-    // if(sideBar.style.width === "0px"){
-    // }
+
     for (let i = 0; i < tasksLi.length; i++) {
         const taskLi = tasksLi[i];
         taskLi.classList.toggle("side-close-li-ajust");
