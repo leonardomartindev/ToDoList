@@ -15,6 +15,8 @@ form.addEventListener("submit", (e) =>{
 
 const input = document.querySelector("#Add-task-input");
 const ul = document.getElementsByClassName("tasks-ul")[0];
+const divTask = document.querySelector(".checkLabel")
+console.log(divTask)
 
 function createTask(value){
     if (!value) {
@@ -42,9 +44,9 @@ function createTask(value){
     const label = document.createElement("label");
     label.innerHTML = value;
 
+    li.classList.add("tasks-li");
     li.appendChild(checkbox);
     li.appendChild(label);
-    li.classList.add("tasks-li");
     li.appendChild(deleteButton)
     ul.appendChild(li);
 }
@@ -57,3 +59,23 @@ input.addEventListener("keydown", (event) =>{
         return;
       }
 });
+
+
+
+function getFormattedDate() {
+  const daysOfWeek = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+  const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+  const now = new Date();
+  const dayOfWeek = daysOfWeek[now.getDay()];
+  const dayOfMonth = now.getDate();
+  const month = months[now.getMonth()];
+
+  return `${dayOfWeek}, ${dayOfMonth} de ${month}`;
+}
+getFormattedDate()
+
+const spanDate = document.getElementsByClassName("data");
+for (let i = 0; i < spanDate.length; i++) {
+  spanDate[i].innerHTML = getFormattedDate();
+}
