@@ -51,8 +51,7 @@
                 <li id="settings">
                     <img src="img/settings.svg" alt="">
                     <div class="container-config mouseenter">
-                        <span><input type="checkbox" name="dark"> <label for="Dark">Dark Mode</label></span>
-                        <span><input type="checkbox" name="showDelete"> <label for="showDelete">Show Completed</label></span>
+                        <span><input class="checkbox-config-darkmode" type="checkbox" name="dark"> <label for="Dark">Dark Mode</label></span>
                     </div>
                 </li>
                 
@@ -63,12 +62,15 @@
     </header>
     <main>
         <form action="">
-            <input id="Add-task-input" type="text" placeholder="&plus; Add task, press enter to save">
+            <input id="Add-task-input" type="text" autocomplete="off" placeholder="&plus; Add task, press enter to save">
         </form>
         <ul class="tasks-ul">
             
         </ul>
     </main>
+    <!-- <div class="container-edit-task">
+        <input type="text" name="edit-task" class="edit-task">
+    </div> -->
 
     <script src="/script/sidebar.js"></script>
     <script src="/script/script.js"></script>
